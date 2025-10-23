@@ -85,7 +85,6 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
 }
 
 .skill-icon {
@@ -104,7 +103,6 @@
 .skill-info {
   flex: 1;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -115,49 +113,7 @@
   margin: 0;
 }
 
-.skill-level {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--primary-color);
-  background: rgba(37, 99, 235, 0.1);
-  padding: 0.25rem 0.75rem;
-  border-radius: 1rem;
-}
-
-.skill-bar {
-  width: 100%;
-  height: 8px;
-  background-color: var(--bg-secondary);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.skill-progress {
-  height: 100%;
-  border-radius: 4px;
-  transition: width 1s ease-in-out;
-  position: relative;
-}
-
-.skill-progress::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
+/* Progress bars and skill levels removed for cleaner design */
 
 .learning-section {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));

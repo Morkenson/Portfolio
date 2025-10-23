@@ -74,7 +74,7 @@ const Contact = () => {
     {
       icon: <FaMapMarkerAlt />,
       title: 'Location',
-      value: 'Wisconsin, USA',
+      value: 'Minneapolis, MN',
       link: null
     }
   ]
@@ -93,19 +93,14 @@ const Contact = () => {
         <div className="contact-intro fade-in">
           <p>
             I'm always interested in AI/ML engineering opportunities, research collaborations, and exciting projects. 
-            Whether you have questions about machine learning, want to collaborate on computer vision projects, or just want to discuss AI technologies, 
+            Whether you have questions about machine learning, want to collaborate, or just want to discuss AI technologies, 
             feel free to reach out!
           </p>
         </div>
 
         <div className="contact-content">
           <div className="contact-info fade-in">
-            <h3>Let's Connect</h3>
-            <p>
-              I'm currently seeking AI/ML engineering internships and collaborative research projects. As an AI & ML Learning Engineer 
-              with expertise in computer vision, robotics, and machine learning, I'm passionate about developing intelligent systems 
-              and contributing to cutting-edge AI research projects.
-            </p>
+          
 
             <div className="contact-details">
               {contactInfo.map((info, index) => (
@@ -196,7 +191,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                   required
                   rows="5"
-                  placeholder="Tell me about your project or just say hello!"
+                  placeholder="Say hello!"
                 ></textarea>
               </div>
 

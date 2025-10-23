@@ -188,3 +188,59 @@ html {
     padding: 0 1rem;
   }
 }
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  border-radius: 6px;
+  border: 2px solid var(--bg-primary);
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--bg-primary);
+}
+
+/* Firefox Scrollbar Styling */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--bg-primary);
+}
+
+/* Home Page Zoom */
+.home-page {
+  transform: scale(1.25) translateY(-30px);
+  transform-origin: top center;
+  min-height: 100vh;
+}
+
+/* Reduce section heights */
+.home-page .section {
+  padding: 3rem 0;
+}
+
+.home-page .projects {
+  padding: 2rem 0;
+}
+
+.home-page .skills {
+  padding: 2rem 0;
+}
+
+.home-page .contact {
+  padding: 2rem 0;
+}

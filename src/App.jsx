@@ -1,27 +1,34 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import AboutPage from './pages/AboutPage'
 import ScrollProgress from './components/ScrollProgress'
 import FloatingElements from './components/FloatingElements'
 
 function App() {
   return (
-    <div className="App">
-      <ScrollProgress />
-      <FloatingElements />
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-      </main>
-    </div>
+    <Router>
+      <div className="App">
+        <ScrollProgress />
+        <FloatingElements />
+        <Header />
+        <Routes>
+          <Route path="/" element={
+            <main className="home-page">
+              <Hero />
+              <Projects />
+              <Skills />
+              <Contact />
+            </main>
+          } />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 

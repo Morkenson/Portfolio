@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa'
 import './Hero.css'
+import self from '../static/self.jpg'
 
 const Hero = () => {
   const heroRef = useRef(null)
@@ -31,6 +32,8 @@ const Hero = () => {
     }
   }
 
+  // About content moved to separate About page
+
   return (
     <section id="home" className="hero" ref={heroRef}>
       <div className="hero-background">
@@ -45,15 +48,18 @@ const Hero = () => {
         <div className="hero-content fade-in">
           <div className="hero-text">
             <h1 className="hero-title">
-              Hi, I'm <span className="highlight">Zachary Mork</span>
+              Hi, I'm
+            </h1>
+            <h1 className="hero-name">
+              Zachary Mork
             </h1>
             <h2 className="hero-subtitle">
               AI & ML Learning Engineer
             </h2>
             <p className="hero-description">
-              Passionate about developing intelligent systems and machine learning solutions. 
-              Currently pursuing my Bachelor's in Software Engineering with expertise in AI-driven robotics, 
-              computer vision, and predictive modeling for real-world applications.
+              AI & ML Learning Engineer and Software Engineering student at UW-Platteville with expertise in computer vision, 
+              robotics, and real-time inference systems. Currently developing cutting-edge AI solutions with &lt;150ms latency 
+              for embedded systems while pursuing my Bachelor's degree with a Cybersecurity minor.
             </p>
             
             <div className="hero-buttons">
@@ -65,10 +71,18 @@ const Hero = () => {
               </button>
               <button 
                 className="btn btn-secondary"
-                onClick={() => scrollToSection('contact')}
+                onClick={() => window.location.href = '/about'}
               >
-                Get In Touch
+                Learn More About Me
               </button>
+              <a 
+                href="https://raw.githubusercontent.com/Morkenson/Portfolio/main/Zachary-Mork-Resume.docx" 
+                download="Zachary_Mork_Resume.docx"
+                className="btn btn-resume"
+              >
+                <FaDownload />
+                Download Resume
+              </a>
             </div>
 
             <div className="hero-social">
@@ -81,31 +95,26 @@ const Hero = () => {
               <a href="mailto:morkzachw@gmail.com" className="social-link">
                 <FaEnvelope />
               </a>
-              <a href="/resume.pdf" download className="social-link">
-                <FaDownload />
-              </a>
             </div>
           </div>
           
           <div className="hero-image">
             <div className="profile-card">
               <div className="profile-image">
-                <div className="placeholder-avatar">
-                  <span>ZM</span>
-                </div>
+                <img 
+                  src={self} 
+                  alt="Zachary Mork" 
+                  className="profile-photo"
+                />
               </div>
-              <div className="profile-info">
-                <h3>Zachary Mork</h3>
-                <p>AI & ML Learning Engineer</p>
-                <div className="status-indicator">
-                  <span className="status-dot"></span>
-                  Available for opportunities
-                </div>
+              
               </div>
             </div>
           </div>
         </div>
-      </div>
+
+        {/* About content moved to separate About page */}
+      
     </section>
   )
 }

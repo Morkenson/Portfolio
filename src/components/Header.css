@@ -20,13 +20,37 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: .1rem;
+}
+
+.nav-right {
+  flex-shrink: 0;
+  padding-right: 1rem;
+}
+
+.nav-brand {
+  flex-shrink: 0;
+  padding-left: 2rem;
 }
 
 .nav-brand .logo {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary-color);
+}
+
+.nav {
+  flex-shrink: 0;
+  padding-right: 2rem;
+  padding-left: 3rem;
 }
 
 .nav-list {
@@ -63,6 +87,44 @@
   transition: width 0.3s ease;
 }
 
+.nav-link::before {
+  content: '|';
+  position: absolute;
+  right: -1rem;
+  color: var(--text-secondary);
+  opacity: 0.3;
+  font-weight: 300;
+}
+
+.nav-link:last-child::before {
+  display: none;
+}
+
+.nav-about {
+  background: var(--primary-color) !important;
+  color: white !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.25rem !important;
+  border: 1px solid var(--primary-color) !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.nav-about:hover {
+  background: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3) !important;
+}
+
+.nav-about::before {
+  display: none !important;
+}
+
+.nav-about::after {
+  display: none !important;
+}
+
 .nav-link:hover::after {
   width: 100%;
 }
@@ -77,6 +139,11 @@
 }
 
 @media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   .nav {
     position: fixed;
     top: 100%;
@@ -96,6 +163,26 @@
     visibility: visible;
   }
 
+  .nav-right {
+    position: fixed;
+    top: calc(100% + 200px);
+    left: 0;
+    right: 0;
+    background-color: var(--bg-primary);
+    border-top: 1px solid var(--border-color);
+    padding: 0rem 0rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .nav-open + .nav-right {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
   .nav-list {
     flex-direction: column;
     padding: 2rem;
@@ -104,6 +191,11 @@
 
   .nav-link {
     padding: 0.5rem 0;
+    text-align: center;
+  }
+
+  .nav-about {
+    width: 100%;
     text-align: center;
   }
 

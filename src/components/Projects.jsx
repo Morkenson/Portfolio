@@ -30,7 +30,7 @@ const Projects = () => {
       id: 1,
       title: 'Premier League Match Predictor',
       description: 'Developed a predictive model to forecast Premier League match outcomes using historical data and machine learning. Utilized Logistic Regression with hyperparameter tuning and cross-validation to improve model performance.',
-      image: '/api/placeholder/400/300',
+      image: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=400&h=300&fit=crop&crop=center',
       technologies: ['Python', 'Flask', 'PostgreSQL', 'Scikit-learn', 'Pandas', 'NumPy'],
       category: 'ml',
       github: 'https://github.com',
@@ -41,7 +41,7 @@ const Projects = () => {
       id: 2,
       title: 'Real-Time Messaging Application',
       description: 'Built a full-stack chat application enabling users to send and receive messages in real-time. Integrated WebSockets for instant notifications, typing indicators, and seamless message exchange with React frontend.',
-      image: '/api/placeholder/400/300',
+      image: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=400&h=300&fit=crop&crop=center',
       technologies: ['Node.js', 'React', 'Express', 'MySQL', 'Socket.IO', 'Cryptography'],
       category: 'fullstack',
       github: 'https://github.com',
@@ -52,7 +52,7 @@ const Projects = () => {
       id: 3,
       title: 'Secure Password Manager',
       description: 'Designed and developed a cross-platform password manager to securely store and generate user credentials. Utilized industry-standard encryption (AES-256) and hashing with multi-factor authentication.',
-      image: '/api/placeholder/400/300',
+      image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=300&fit=crop&crop=center',
       technologies: ['Python', 'Flask', 'PostgreSQL', 'Cryptography', 'Bcrypt'],
       category: 'security',
       github: 'https://github.com',
@@ -63,7 +63,7 @@ const Projects = () => {
       id: 4,
       title: 'AI-Powered RC Car Research',
       description: 'Research project developing an AI-powered RC car with computer vision capabilities for obstacle detection and avoidance. Achieved &lt;150ms end-to-end latency at 1080p using Python, OpenCV, and TensorFlow Lite on embedded systems.',
-      image: '/api/placeholder/400/300',
+      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop&crop=center',
       technologies: ['Python', 'Computer Vision', 'AI/ML', 'Real-time Systems', 'Embedded Systems'],
       category: 'research',
       github: 'https://github.com',
@@ -115,10 +115,7 @@ const Projects = () => {
           {filteredProjects.map((project) => (
             <div key={project.id} className={`project-card ${project.featured ? 'featured' : ''}`}>
               <div className="project-image">
-                <div className="project-placeholder">
-                  <FaCode />
-                  <span>Project Image</span>
-                </div>
+                <img src={project.image} alt={project.title} className="project-img" />
                 <div className="project-overlay">
                   <div className="project-links">
                     <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">

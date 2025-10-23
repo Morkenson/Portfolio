@@ -93,7 +93,7 @@ const Skills = () => {
           <p>
             I specialize in AI/ML engineering with expertise in developing intelligent systems, 
             computer vision solutions, and machine learning pipelines. Here are the technologies 
-            I work with and my proficiency level in each.
+            I work with.
           </p>
         </div>
 
@@ -110,17 +110,7 @@ const Skills = () => {
                       </div>
                       <div className="skill-info">
                         <h4 className="skill-name">{skill.name}</h4>
-                        <span className="skill-level">{skill.level}%</span>
                       </div>
-                    </div>
-                    <div className="skill-bar">
-                      <div 
-                        className="skill-progress" 
-                        style={{ 
-                          width: `${skill.level}%`,
-                          backgroundColor: skill.color 
-                        }}
-                      ></div>
                     </div>
                   </div>
                 ))}
