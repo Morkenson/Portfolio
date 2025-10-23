@@ -5,19 +5,27 @@
 }
 
 :root {
-  --primary-color: #2563eb;
-  --primary-dark: #1d4ed8;
+  --primary-color: #0ea5e9;
+  --primary-dark: #0284c7;
   --secondary-color: #64748b;
-  --accent-color: #f59e0b;
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
+  --accent-color: #10b981;
+  --accent-secondary: #f59e0b;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
   --text-light: #94a3b8;
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
-  --bg-dark: #0f172a;
-  --border-color: #e2e8f0;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-dark: #000000;
+  --bg-card: rgba(30, 30, 30, 0.8);
+  --bg-glass: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-glow: rgba(14, 165, 233, 0.3);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 20px rgba(14, 165, 233, 0.2);
+  --gradient-primary: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  --gradient-accent: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
 }
 
 body {
@@ -28,7 +36,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   color: var(--text-primary);
-  background-color: var(--bg-primary);
+  background: radial-gradient(ellipse at top, #1a1a2e 0%, #0a0a0a 50%, #000000 100%);
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 html {
@@ -46,34 +56,71 @@ html {
 }
 
 .section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3.5rem;
+  font-weight: 800;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   color: var(--text-primary);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  letter-spacing: -0.02em;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--gradient-accent);
+  border-radius: 2px;
 }
 
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
+  padding: 0.875rem 2rem;
+  border-radius: 0.75rem;
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
   cursor: pointer;
   font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
+  background: var(--gradient-primary);
   color: white;
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-dark);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
 }
 
 .btn-secondary {
@@ -88,16 +135,32 @@ html {
 }
 
 .card {
-  background: white;
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: var(--shadow);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gradient-glass);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px) rotateX(5deg);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  border-color: var(--border-glow);
 }
 
 .fade-in {

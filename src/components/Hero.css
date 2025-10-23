@@ -4,8 +4,26 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+              linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #000000 100%);
   color: white;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(10px, 10px); }
 }
 
 .hero-background {
@@ -26,8 +44,11 @@
 .shape {
   position: absolute;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--gradient-glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   animation: float 6s ease-in-out infinite;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .shape-1 {
@@ -78,14 +99,22 @@
 }
 
 .hero-title {
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-size: 4.5rem;
+  font-weight: 900;
   margin-bottom: 1rem;
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .highlight {
-  color: var(--accent-color);
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   position: relative;
 }
 
@@ -95,9 +124,10 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 3px;
-  background-color: var(--accent-color);
+  height: 4px;
+  background: var(--gradient-accent);
   border-radius: 2px;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
 }
 
 .hero-subtitle {
@@ -131,7 +161,7 @@
 }
 
 .hero-buttons .btn-primary:hover {
-  background-color: #d97706;
+  background-color: #059669;
 }
 
 .hero-buttons .btn-secondary {
@@ -177,13 +207,26 @@
 }
 
 .profile-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
+  background: var(--bg-glass);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   border-radius: 2rem;
-  padding: 2rem;
+  padding: 2.5rem;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gradient-glass);
 }
 
 .profile-image {
@@ -191,18 +234,36 @@
 }
 
 .placeholder-avatar {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-color), #f59e0b);
+  background: var(--gradient-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   color: white;
   margin: 0 auto;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder-avatar::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .profile-info h3 {

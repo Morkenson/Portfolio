@@ -48,11 +48,12 @@ const Hero = () => {
               Hi, I'm <span className="highlight">Zachary Mork</span>
             </h1>
             <h2 className="hero-subtitle">
-              Software Engineering Student
+              AI & ML Learning Engineer
             </h2>
             <p className="hero-description">
-              Passionate about creating innovative solutions and building secure, scalable applications. 
-              Currently pursuing my Bachelor's in Software Engineering with a focus on cybersecurity and cloud technologies.
+              Passionate about developing intelligent systems and machine learning solutions. 
+              Currently pursuing my Bachelor's in Software Engineering with expertise in AI-driven robotics, 
+              computer vision, and predictive modeling for real-world applications.
             </p>
             
             <div className="hero-buttons">
@@ -95,7 +96,7 @@ const Hero = () => {
               </div>
               <div className="profile-info">
                 <h3>Zachary Mork</h3>
-                <p>Software Engineering Student</p>
+                <p>AI & ML Learning Engineer</p>
                 <div className="status-indicator">
                   <span className="status-dot"></span>
                   Available for opportunities

@@ -24,11 +24,26 @@
 }
 
 .about-stats {
-  background: white;
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: var(--shadow);
   height: fit-content;
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-stats::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gradient-glass);
 }
 
 .about-stats h4 {
@@ -83,30 +98,60 @@
 }
 
 .interest-card {
-  background: white;
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: var(--shadow);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.interest-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gradient-glass);
 }
 
 .interest-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px) rotateX(5deg);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  border-color: var(--border-glow);
 }
 
 .interest-icon {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  width: 70px;
+  height: 70px;
+  background: var(--gradient-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: white;
+  box-shadow: var(--shadow-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.interest-icon::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: rotate 4s linear infinite;
 }
 
 .interest-card h5 {

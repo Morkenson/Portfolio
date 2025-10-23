@@ -39,46 +39,47 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: 'Programming Languages',
+      title: 'AI/ML Technologies',
       skills: [
-        { name: 'Python', icon: <FaPython />, level: 90, color: '#3776ab' },
-        { name: 'Java', icon: <FaJava />, level: 85, color: '#f89820' },
-        { name: 'JavaScript', icon: <FaJs />, level: 85, color: '#f7df1e' },
-        { name: 'TypeScript', icon: <SiTypescript />, level: 80, color: '#3178c6' },
-        { name: 'C/C++', icon: <FaCode />, level: 75, color: '#00599c' },
-        { name: 'SQL', icon: <FaDatabase />, level: 85, color: '#336791' }
+        { name: 'Python', icon: <FaPython />, level: 95, color: '#3776ab' },
+        { name: 'TensorFlow', icon: <FaCode />, level: 85, color: '#ff6f00' },
+        { name: 'PyTorch', icon: <FaCode />, level: 80, color: '#ee4c2c' },
+        { name: 'Scikit-learn', icon: <FaPython />, level: 90, color: '#f7931e' },
+        { name: 'OpenCV', icon: <FaCode />, level: 85, color: '#06b6d4' },
+        { name: 'Pandas/NumPy', icon: <FaPython />, level: 90, color: '#150458' }
       ]
     },
     {
-      title: 'Frameworks & Libraries',
+      title: 'Computer Vision & Robotics',
       skills: [
-        { name: 'React', icon: <FaReact />, level: 85, color: '#61dafb' },
-        { name: 'Node.js', icon: <FaNodeJs />, level: 80, color: '#339933' },
-        { name: 'Express.js', icon: <SiExpress />, level: 80, color: '#000000' },
-        { name: 'Flask', icon: <FaPython />, level: 85, color: '#000000' },
-        { name: 'Scikit-learn', icon: <FaPython />, level: 75, color: '#f7931e' },
-        { name: 'Socket.IO', icon: <FaJs />, level: 80, color: '#010101' }
+        { name: 'Object Detection', icon: <FaCode />, level: 85, color: '#10b981' },
+        { name: 'Image Processing', icon: <FaCode />, level: 80, color: '#06b6d4' },
+        { name: 'Real-time Systems', icon: <FaCode />, level: 85, color: '#f59e0b' },
+        { name: 'Embedded Systems', icon: <FaCode />, level: 80, color: '#f59e0b' },
+        { name: 'TensorFlow Lite', icon: <FaCode />, level: 85, color: '#ff6f00' },
+        { name: 'Edge Computing', icon: <FaCode />, level: 75, color: '#10b981' }
       ]
     },
     {
-      title: 'Cloud & DevOps',
+      title: 'Cloud & Deployment',
       skills: [
         { name: 'AWS', icon: <FaAws />, level: 85, color: '#ff9900' },
         { name: 'Docker', icon: <SiDocker />, level: 80, color: '#2496ed' },
-        { name: 'Terraform', icon: <SiTerraform />, level: 70, color: '#7b42bc' },
-        { name: 'Jenkins', icon: <SiJenkins />, level: 75, color: '#d24939' },
+        { name: 'ML Model Deployment', icon: <FaCode />, level: 85, color: '#10b981' },
+        { name: 'Flask', icon: <FaPython />, level: 85, color: '#000000' },
         { name: 'Git', icon: <FaGitAlt />, level: 90, color: '#f05032' },
         { name: 'Linux', icon: <FaCode />, level: 85, color: '#fcc624' }
       ]
     },
     {
-      title: 'Databases & Security',
+      title: 'Data & Analytics',
       skills: [
         { name: 'PostgreSQL', icon: <SiPostgresql />, level: 85, color: '#336791' },
-        { name: 'MySQL', icon: <FaDatabase />, level: 80, color: '#4479a1' },
-        { name: 'Cryptography', icon: <FaCode />, level: 80, color: '#8b5cf6' },
-        { name: 'Bcrypt', icon: <FaCode />, level: 85, color: '#059669' },
-        { name: 'OWASP', icon: <FaCode />, level: 75, color: '#dc2626' }
+        { name: 'Data Pipeline', icon: <FaDatabase />, level: 80, color: '#059669' },
+        { name: 'Feature Engineering', icon: <FaCode />, level: 85, color: '#dc2626' },
+        { name: 'Model Optimization', icon: <FaCode />, level: 80, color: '#7c2d12' },
+        { name: 'Cross-validation', icon: <FaCode />, level: 85, color: '#10b981' },
+        { name: 'Hyperparameter Tuning', icon: <FaCode />, level: 80, color: '#0ea5e9' }
       ]
     }
   ]
@@ -90,8 +91,9 @@ const Skills = () => {
         
         <div className="skills-intro fade-in">
           <p>
-            I'm constantly learning and expanding my skill set. Here are the technologies 
-            I'm currently working with and my proficiency level in each.
+            I specialize in AI/ML engineering with expertise in developing intelligent systems, 
+            computer vision solutions, and machine learning pipelines. Here are the technologies 
+            I work with and my proficiency level in each.
           </p>
         </div>
 
@@ -128,23 +130,31 @@ const Skills = () => {
         </div>
 
         <div className="learning-section fade-in">
-          <h3>Currently Learning & Research</h3>
+          <h3>Current Research & Learning Focus</h3>
           <div className="learning-items">
             <div className="learning-item">
               <span className="learning-dot"></span>
-              <span>AI Vision Stack for Autonomous Vehicles</span>
+              <span>AI-Driven Robotics & Computer Vision</span>
             </div>
             <div className="learning-item">
               <span className="learning-dot"></span>
-              <span>Real-time Control Systems & Low Latency</span>
+              <span>Real-time Inference Optimization (&lt;150ms)</span>
             </div>
             <div className="learning-item">
               <span className="learning-dot"></span>
-              <span>Advanced Cybersecurity Techniques</span>
+              <span>TensorFlow Lite for Edge Deployment</span>
             </div>
             <div className="learning-item">
               <span className="learning-dot"></span>
-              <span>Machine Learning Model Optimization</span>
+              <span>Advanced ML Model Tuning & Performance</span>
+            </div>
+            <div className="learning-item">
+              <span className="learning-dot"></span>
+              <span>Object Detection & Obstacle Avoidance</span>
+            </div>
+            <div className="learning-item">
+              <span className="learning-dot"></span>
+              <span>End-to-End ML Pipeline Development</span>
             </div>
           </div>
         </div>

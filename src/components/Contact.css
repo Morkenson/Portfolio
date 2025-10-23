@@ -51,8 +51,9 @@
 }
 
 .contact-item:hover {
-  background: white;
+  background: var(--bg-card);
   box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
 }
 
 .contact-icon {
@@ -118,10 +119,25 @@
 }
 
 .contact-form-container {
-  background: white;
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   padding: 2.5rem;
   border-radius: 1rem;
   box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gradient-glass);
 }
 
 .contact-form h3 {
@@ -152,6 +168,8 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   font-family: inherit;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
 }
 
 .form-group input:focus,

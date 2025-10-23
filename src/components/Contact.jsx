@@ -92,8 +92,8 @@ const Contact = () => {
         
         <div className="contact-intro fade-in">
           <p>
-            I'm always interested in new opportunities and exciting projects. 
-            Whether you have a question, want to collaborate, or just want to say hi, 
+            I'm always interested in AI/ML engineering opportunities, research collaborations, and exciting projects. 
+            Whether you have questions about machine learning, want to collaborate on computer vision projects, or just want to discuss AI technologies, 
             feel free to reach out!
           </p>
         </div>
@@ -102,9 +102,9 @@ const Contact = () => {
           <div className="contact-info fade-in">
             <h3>Let's Connect</h3>
             <p>
-              I'm currently seeking internship opportunities and collaborative projects in software engineering, 
-              cybersecurity, and cloud technologies. As a Software Engineering student with AWS certification, 
-              I'm passionate about building secure, scalable solutions and contributing to innovative research projects.
+              I'm currently seeking AI/ML engineering internships and collaborative research projects. As an AI & ML Learning Engineer 
+              with expertise in computer vision, robotics, and machine learning, I'm passionate about developing intelligent systems 
+              and contributing to cutting-edge AI research projects.
             </p>
 
             <div className="contact-details">

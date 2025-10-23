@@ -62,13 +62,13 @@ const Projects = () => {
     {
       id: 4,
       title: 'AI-Powered RC Car Research',
-      description: 'Currently prototyping an internet-controlled RC car with an onboard AI vision stack to detect and avoid obstacles. Goal of end-to-end control latency of less than 150ms @ 720p on campus Wi-Fi.',
+      description: 'Research project developing an AI-powered RC car with computer vision capabilities for obstacle detection and avoidance. Achieved &lt;150ms end-to-end latency at 1080p using Python, OpenCV, and TensorFlow Lite on embedded systems.',
       image: '/api/placeholder/400/300',
       technologies: ['Python', 'Computer Vision', 'AI/ML', 'Real-time Systems', 'Embedded Systems'],
       category: 'research',
       github: 'https://github.com',
       live: 'https://example.com',
-      featured: false
+      featured: true
     }
   ]
 
@@ -84,8 +84,6 @@ const Projects = () => {
     ? projects 
     : projects.filter(project => project.category === filter)
 
-  const featuredProjects = projects.filter(project => project.featured)
-
   return (
     <section id="projects" className="projects section" ref={projectsRef}>
       <div className="container">
@@ -93,92 +91,56 @@ const Projects = () => {
         
         <div className="projects-intro fade-in">
           <p>
-            Here are some of my recent projects that showcase my skills and passion for development. 
-            Each project represents a learning journey and demonstrates different aspects of modern web development.
+            Here are some of my recent projects that showcase my expertise in AI/ML engineering and machine learning. 
+            Each project demonstrates my ability to develop end-to-end ML pipelines, implement computer vision solutions, 
+            and deploy intelligent systems for real-world applications.
           </p>
         </div>
 
-        {/* Featured Projects */}
-        <div className="featured-projects fade-in">
-          <h3>Featured Projects</h3>
-          <div className="featured-grid">
-            {featuredProjects.map((project) => (
-              <div key={project.id} className="project-card featured">
-                <div className="project-image">
-                  <div className="project-placeholder">
-                    <FaCode />
-                    <span>Project Image</span>
-                  </div>
-                  <div className="project-overlay">
-                    <div className="project-links">
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
-                        <FaGithub />
-                      </a>
-                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="project-link">
-                        <FaExternalLinkAlt />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="project-content">
-                  <h4 className="project-title">{project.title}</h4>
-                  <p className="project-description">{project.description}</p>
-                  <div className="project-technologies">
-                    {project.technologies.map((tech, index) => (
-                      <span key={index} className="tech-tag">{tech}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* Projects Filter */}
+        <div className="projects-filter fade-in">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              className={`filter-btn ${filter === category.id ? 'active' : ''}`}
+              onClick={() => setFilter(category.id)}
+            >
+              {category.label}
+            </button>
+          ))}
         </div>
 
-        {/* All Projects with Filter */}
-        <div className="all-projects fade-in">
-          <div className="projects-filter">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                className={`filter-btn ${filter === category.id ? 'active' : ''}`}
-                onClick={() => setFilter(category.id)}
-              >
-                {category.label}
-              </button>
-            ))}
-          </div>
-
-          <div className="projects-grid">
-            {filteredProjects.map((project) => (
-              <div key={project.id} className="project-card">
-                <div className="project-image">
-                  <div className="project-placeholder">
-                    <FaCode />
-                    <span>Project Image</span>
-                  </div>
-                  <div className="project-overlay">
-                    <div className="project-links">
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
-                        <FaGithub />
-                      </a>
-                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="project-link">
-                        <FaExternalLinkAlt />
-                      </a>
-                    </div>
-                  </div>
+        {/* Projects Grid */}
+        <div className="projects-grid fade-in">
+          {filteredProjects.map((project) => (
+            <div key={project.id} className={`project-card ${project.featured ? 'featured' : ''}`}>
+              <div className="project-image">
+                <div className="project-placeholder">
+                  <FaCode />
+                  <span>Project Image</span>
                 </div>
-                <div className="project-content">
-                  <h4 className="project-title">{project.title}</h4>
-                  <p className="project-description">{project.description}</p>
-                  <div className="project-technologies">
-                    {project.technologies.map((tech, index) => (
-                      <span key={index} className="tech-tag">{tech}</span>
-                    ))}
+                <div className="project-overlay">
+                  <div className="project-links">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
+                      <FaGithub />
+                    </a>
+                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="project-link">
+                      <FaExternalLinkAlt />
+                    </a>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+              <div className="project-content">
+                <h4 className="project-title">{project.title}</h4>
+                <p className="project-description">{project.description}</p>
+                <div className="project-technologies">
+                  {project.technologies.map((tech, index) => (
+                    <span key={index} className="tech-tag">{tech}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

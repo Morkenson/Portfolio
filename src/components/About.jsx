@@ -32,10 +32,10 @@ const About = () => {
   ]
 
   const interests = [
-    { icon: <FaCode />, title: 'Full-Stack Development', description: 'Building secure and scalable web applications with modern technologies' },
-    { icon: <FaGraduationCap />, title: 'Cybersecurity', description: 'Protecting systems and data through secure coding practices and encryption' },
-    { icon: <FaLightbulb />, title: 'AI & Machine Learning', description: 'Developing intelligent systems and predictive models for real-world applications' },
-    { icon: <FaHeart />, title: 'Cloud Technologies', description: 'Leveraging AWS services to build robust, scalable cloud solutions' }
+    { icon: <FaCode />, title: 'AI-Driven Robotics', description: 'Implementing object detection and obstacle avoidance using Python, OpenCV, and TensorFlow Lite on embedded systems' },
+    { icon: <FaGraduationCap />, title: 'Machine Learning', description: 'Developing predictive models with Scikit-learn, Pandas, and NumPy for real-world applications' },
+    { icon: <FaLightbulb />, title: 'Computer Vision', description: 'Building intelligent systems with &lt;150ms end-to-end latency for real-time deployment' },
+    { icon: <FaHeart />, title: 'Cloud Integration', description: 'Deploying ML models and applications using AWS services with focus on performance optimization' }
   ]
 
   return (
@@ -47,19 +47,19 @@ const About = () => {
           <div className="about-text fade-in">
             <h3>Hello! I'm Zachary Mork</h3>
             <p>
-              I'm a Software Engineering student at the University of Wisconsin-Platteville with a passion 
-              for creating secure, innovative solutions. My journey combines academic excellence with hands-on 
-              experience in full-stack development, cybersecurity, and cloud technologies.
+              I'm an AI & ML Learning Engineer and Software Engineering student at the University of Wisconsin-Platteville 
+              with a passion for developing intelligent systems and machine learning solutions. My journey combines academic 
+              excellence with hands-on experience in AI-driven robotics, computer vision, and predictive modeling.
             </p>
             <p>
               Currently pursuing my Bachelor's degree with a minor in Cybersecurity, I'm focused on mastering 
-              modern technologies including React, Node.js, Python, and AWS cloud services. I believe in writing 
-              clean, secure code and following industry best practices to create scalable applications.
+              AI/ML technologies including Python, TensorFlow, PyTorch, OpenCV, and AWS cloud services. I specialize in 
+              developing end-to-end ML pipelines with emphasis on real-time inference and model optimization.
             </p>
             <p>
-              As a Research Assistant, I'm working on cutting-edge projects including an AI-powered RC car with 
-              obstacle detection. When I'm not coding, you can find me on the soccer field as team captain or 
-              exploring new technologies that push the boundaries of what's possible.
+              As a Research Assistant, I'm working on cutting-edge AI projects including object detection and obstacle 
+              avoidance systems with &lt;150ms latency requirements. When I'm not developing ML models, you can find me 
+              on the soccer field as team captain or exploring the latest advances in computer vision and deep learning.
             </p>
           </div>
 
