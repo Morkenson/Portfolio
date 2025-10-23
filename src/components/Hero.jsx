@@ -37,11 +37,6 @@ const Hero = () => {
   return (
     <section id="home" className="hero" ref={heroRef}>
       <div className="hero-background">
-        <div className="hero-shapes">
-          <div className="shape shape-1"></div>
-          <div className="shape shape-2"></div>
-          <div className="shape shape-3"></div>
-        </div>
       </div>
       
       <div className="container">

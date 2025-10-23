@@ -7,14 +7,12 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import AboutPage from './pages/AboutPage'
 import ScrollProgress from './components/ScrollProgress'
-import FloatingElements from './components/FloatingElements'
 
 function App() {
   return (
     <Router>
       <div className="App">
         <ScrollProgress />
-        <FloatingElements />
         <Header />
         <Routes>
           <Route path="/" element={
