@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import './Hero.css'
 import self from '../static/self.jpg'
 
@@ -70,14 +70,6 @@ const Hero = () => {
               >
                 Learn More About Me
               </button>
-              <a 
-                href="https://raw.githubusercontent.com/Morkenson/Portfolio/main/Zachary-Mork-Software-Engineer-Resume.docx" 
-                download="Zachary_Mork_Resume.docx"
-                className="btn btn-resume"
-              >
-                <FaDownload />
-                Download Resume
-              </a>
             </div>
 
             <div className="hero-social">
