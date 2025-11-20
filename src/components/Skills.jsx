@@ -12,7 +12,7 @@ import {
   FaAws,
   FaCode
 } from 'react-icons/fa'
-import { SiTypescript, SiPostgresql, SiExpress, SiDocker, SiTerraform, SiJenkins } from 'react-icons/si'
+import { SiTypescript, SiPostgresql, SiExpress, SiDocker, SiTerraform, SiJenkins, SiCsharp, SiMysql, SiAngular, SiDotnet } from 'react-icons/si'
 import './Skills.css'
 
 const Skills = () => {
@@ -39,47 +39,50 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: 'AI/ML Technologies',
+      title: 'Languages',
       skills: [
         { name: 'Python', icon: <FaPython />, level: 95, color: '#3776ab' },
+        { name: 'C#', icon: <SiCsharp />, level: 85, color: '#239120' },
+        { name: 'C/C++', icon: <FaCode />, level: 80, color: '#00599c' },
+        { name: 'JavaScript/TypeScript', icon: <SiTypescript />, level: 90, color: '#3178c6' },
+        { name: 'SQL', icon: <FaDatabase />, level: 85, color: '#336791' }
+      ]
+    },
+    {
+      title: 'Frameworks & Databases',
+      skills: [
+        { name: 'React', icon: <FaReact />, level: 90, color: '#61dafb' },
+        { name: 'Angular', icon: <SiAngular />, level: 85, color: '#dd0031' },
+        { name: 'Flask', icon: <FaPython />, level: 85, color: '#000000' },
+        { name: 'Express', icon: <SiExpress />, level: 80, color: '#000000' },
+        { name: '.NET', icon: <SiDotnet />, level: 85, color: '#512bd4' },
+        { name: 'PostgreSQL', icon: <SiPostgresql />, level: 85, color: '#336791' },
+        { name: 'MySQL', icon: <SiMysql />, level: 80, color: '#4479a1' }
+      ]
+    },
+    {
+      title: 'AI/ML Tools',
+      skills: [
+        { name: 'Scikit-learn', icon: <FaPython />, level: 90, color: '#f7931e' },
+        { name: 'Pandas', icon: <FaPython />, level: 90, color: '#150458' },
+        { name: 'NumPy', icon: <FaPython />, level: 90, color: '#013243' },
         { name: 'TensorFlow', icon: <FaCode />, level: 85, color: '#ff6f00' },
         { name: 'PyTorch', icon: <FaCode />, level: 80, color: '#ee4c2c' },
-        { name: 'Scikit-learn', icon: <FaPython />, level: 90, color: '#f7931e' },
         { name: 'OpenCV', icon: <FaCode />, level: 85, color: '#06b6d4' },
-        { name: 'Pandas/NumPy', icon: <FaPython />, level: 90, color: '#150458' }
+        { name: 'Matplotlib', icon: <FaCode />, level: 85, color: '#11557c' }
       ]
     },
     {
-      title: 'Computer Vision & Robotics',
+      title: 'DevOps & Cloud',
       skills: [
-        { name: 'Object Detection', icon: <FaCode />, level: 85, color: '#10b981' },
-        { name: 'Image Processing', icon: <FaCode />, level: 80, color: '#06b6d4' },
-        { name: 'Real-time Systems', icon: <FaCode />, level: 85, color: '#f59e0b' },
-        { name: 'Embedded Systems', icon: <FaCode />, level: 80, color: '#f59e0b' },
-        { name: 'TensorFlow Lite', icon: <FaCode />, level: 85, color: '#ff6f00' },
-        { name: 'Edge Computing', icon: <FaCode />, level: 75, color: '#10b981' }
-      ]
-    },
-    {
-      title: 'Cloud & Deployment',
-      skills: [
-        { name: 'AWS', icon: <FaAws />, level: 85, color: '#ff9900' },
+        { name: 'AWS (EC2, S3, RDS, IAM, CloudWatch)', icon: <FaAws />, level: 85, color: '#ff9900' },
+        { name: 'Terraform', icon: <SiTerraform />, level: 80, color: '#7b42bc' },
         { name: 'Docker', icon: <SiDocker />, level: 80, color: '#2496ed' },
-        { name: 'ML Model Deployment', icon: <FaCode />, level: 85, color: '#10b981' },
-        { name: 'Flask', icon: <FaPython />, level: 85, color: '#000000' },
+        { name: 'Linux', icon: <FaCode />, level: 85, color: '#fcc624' },
         { name: 'Git', icon: <FaGitAlt />, level: 90, color: '#f05032' },
-        { name: 'Linux', icon: <FaCode />, level: 85, color: '#fcc624' }
-      ]
-    },
-    {
-      title: 'Data & Analytics',
-      skills: [
-        { name: 'PostgreSQL', icon: <SiPostgresql />, level: 85, color: '#336791' },
-        { name: 'Data Pipeline', icon: <FaDatabase />, level: 80, color: '#059669' },
-        { name: 'Feature Engineering', icon: <FaCode />, level: 85, color: '#dc2626' },
-        { name: 'Model Optimization', icon: <FaCode />, level: 80, color: '#7c2d12' },
-        { name: 'Cross-validation', icon: <FaCode />, level: 85, color: '#10b981' },
-        { name: 'Hyperparameter Tuning', icon: <FaCode />, level: 80, color: '#0ea5e9' }
+        { name: 'CI/CD', icon: <FaCode />, level: 85, color: '#10b981' },
+        { name: 'GitHub Actions', icon: <FaGitAlt />, level: 85, color: '#2088ff' },
+        { name: 'Jenkins', icon: <SiJenkins />, level: 75, color: '#d24939' }
       ]
     }
   ]
@@ -91,9 +94,8 @@ const Skills = () => {
         
         <div className="skills-intro fade-in">
           <p>
-            I specialize in AI/ML engineering with expertise in developing intelligent systems, 
-            computer vision solutions, and machine learning pipelines. Here are the technologies 
-            I work with.
+            I have experience across the full technology stack, from languages and frameworks to 
+            AI/ML tools and cloud infrastructure. Here are the technologies I work with.
           </p>
         </div>
 
@@ -117,36 +119,6 @@ const Skills = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="learning-section fade-in">
-          <h3>Current Research & Learning Focus</h3>
-          <div className="learning-items">
-            <div className="learning-item">
-              <span className="learning-dot"></span>
-              <span>AI-Driven Robotics & Computer Vision</span>
-            </div>
-            <div className="learning-item">
-              <span className="learning-dot"></span>
-              <span>Real-time Inference Optimization (&lt;150ms)</span>
-            </div>
-            <div className="learning-item">
-              <span className="learning-dot"></span>
-              <span>TensorFlow Lite for Edge Deployment</span>
-            </div>
-            <div className="learning-item">
-              <span className="learning-dot"></span>
-              <span>Advanced ML Model Tuning & Performance</span>
-            </div>
-            <div className="learning-item">
-              <span className="learning-dot"></span>
-              <span>Object Detection & Obstacle Avoidance</span>
-            </div>
-            <div className="learning-item">
-              <span className="learning-dot"></span>
-              <span>End-to-End ML Pipeline Development</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>

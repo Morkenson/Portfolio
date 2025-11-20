@@ -68,7 +68,7 @@ const Contact = () => {
     {
       icon: <FaPhone />,
       title: 'Phone',
-      value: '(715) 716-0295',
+      value: '715-716-0295',
       link: 'tel:+17157160295'
     },
     {
@@ -81,7 +81,7 @@ const Contact = () => {
 
   const socialLinks = [
     { icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/zachary-mork', label: 'LinkedIn' },
-    { icon: <FaGithub />, url: 'https://github.com', label: 'GitHub' },
+    { icon: <FaGithub />, url: 'https://github.com/Morkenson', label: 'GitHub' },
     { icon: <FaEnvelope />, url: 'mailto:morkzachw@gmail.com', label: 'Email' }
   ]
 
@@ -92,9 +92,9 @@ const Contact = () => {
         
         <div className="contact-intro fade-in">
           <p>
-            I'm always interested in AI/ML engineering opportunities, research collaborations, and exciting projects. 
-            Whether you have questions about machine learning, want to collaborate, or just want to discuss AI technologies, 
-            feel free to reach out!
+            I'm always interested in software engineering opportunities, research collaborations, and exciting projects. 
+            Whether you have questions about my work, want to collaborate, or just want to discuss technology, 
+            feel free to reach out! You can also visit my portfolio at <a href="https://zachary-mork-portfolio.dev" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline'}}>zachary-mork-portfolio.dev</a>.
           </p>
         </div>
 

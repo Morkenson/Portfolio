@@ -48,9 +48,12 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
   margin-top: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .project-card {
@@ -93,16 +96,18 @@
 
 .project-image {
   position: relative;
-  height: 200px;
+  height: 400px;
   overflow: hidden;
 }
 
 .project-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   border-radius: 0.5rem 0.5rem 0 0;
   transition: transform 0.3s ease;
+  background-color: var(--bg-secondary);
 }
 
 .project-overlay {
@@ -124,7 +129,7 @@
 }
 
 .project-card:hover .project-img {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .project-links {
@@ -154,21 +159,21 @@
 }
 
 .project-content {
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 .project-title {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   color: var(--text-primary);
 }
 
 .project-description {
   color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
 }
 
 .project-technologies {
@@ -180,9 +185,9 @@
 .tech-tag {
   background: var(--bg-secondary);
   color: var(--text-secondary);
-  padding: 0.25rem 0.75rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 1rem;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 500;
   border: 1px solid var(--border-color);
 }

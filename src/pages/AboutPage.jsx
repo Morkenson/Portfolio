@@ -27,17 +27,17 @@ const AboutPage = () => {
   }, [])
 
   const stats = [
-    { number: '3.6', label: 'GPA (4.0 Scale)' },
     { number: '2026', label: 'Graduation Year' },
-    { number: '1', label: 'AWS Certification' },
+    { number: 'May', label: 'Expected Graduation' },
+    { number: 'AWS', label: 'Cloud Practitioner' },
     { number: '100%', label: 'Passion for Code' }
   ]
 
   const interests = [
-    { icon: <FaCode />, title: 'AI-Driven Robotics', description: 'Implementing object detection and obstacle avoidance using Python, OpenCV, and TensorFlow Lite on embedded systems' },
-    { icon: <FaGraduationCap />, title: 'Machine Learning', description: 'Developing predictive models with Scikit-learn, Pandas, and NumPy for real-world applications' },
-    { icon: <FaLightbulb />, title: 'Computer Vision', description: 'Building intelligent systems with &lt;150ms end-to-end latency for real-time deployment' },
-    { icon: <FaHeart />, title: 'Cloud Integration', description: 'Deploying ML models and applications using AWS services with focus on performance optimization' }
+    { icon: <FaCode />, title: 'AI-Driven Robotics', description: 'Designing and implementing AI-driven robotics features with object detection and obstacle avoidance using Python, OpenCV, and TensorFlow Lite' },
+    { icon: <FaGraduationCap />, title: 'Machine Learning', description: 'Developing predictive models with Scikit-learn, Pandas, and NumPy, achieving 75% accuracy on real-world datasets' },
+    { icon: <FaLightbulb />, title: 'Performance Optimization', description: 'Optimizing real-time inference from 500ms to &lt;150ms end-to-end latency at 1080p for embedded systems' },
+    { icon: <FaHeart />, title: 'Full-Stack Development', description: 'Building end-to-end applications with React, Angular, .NET, and cloud services for production deployment' }
   ]
 
   return (
@@ -52,19 +52,21 @@ const AboutPage = () => {
             <div className="about-text fade-in">
               <h3>Hello! I'm Zachary Mork</h3>
               <p>
-                I'm an AI & ML Learning Engineer and Software Engineering student at the University of Wisconsin-Platteville 
-                with a passion for developing intelligent systems and machine learning solutions. My journey combines academic 
-                excellence with hands-on experience in AI-driven robotics, computer vision, and predictive modeling.
+                I'm a Software Engineering student at the University of Wisconsin-Platteville pursuing my Bachelor's degree 
+                with a minor in Cybersecurity, expected to graduate in May 2026. I'm passionate about developing intelligent 
+                systems, full-stack applications, and machine learning solutions that solve real-world problems.
               </p>
               <p>
-                Currently pursuing my Bachelor's degree with a minor in Cybersecurity, I'm focused on mastering 
-                AI/ML technologies including Python, TensorFlow, PyTorch, OpenCV, and AWS cloud services. I specialize in 
-                developing end-to-end ML pipelines with emphasis on real-time inference and model optimization.
+                Currently working as a Research Assistant in the CSSE Department, I'm designing and implementing AI-driven 
+                robotics features including object detection and obstacle avoidance. I've optimized real-time inference 
+                performance from 500ms to less than 150ms end-to-end latency at 1080p, enabling smooth remote control and 
+                responsive navigation.
               </p>
               <p>
-                As a Research Assistant, I'm working on cutting-edge AI projects including object detection and obstacle 
-                avoidance systems with &lt;150ms latency requirements. When I'm not developing ML models, you can find me 
-                on the soccer field as team captain or exploring the latest advances in computer vision and deep learning.
+                I hold an AWS Certified Cloud Practitioner (CLF-C02) certification and have experience across the full 
+                technology stack - from Python and C# backend development to React and Angular frontends, with expertise in 
+                AI/ML tools, cloud deployment, and DevOps practices. My projects range from voice assistants and ML predictors 
+                to full-stack financial analysis platforms.
               </p>
             </div>
 

@@ -4,7 +4,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding-top: 20px;
+  padding-top: 100px;
   background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
               linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #000000 100%);
   color: white;

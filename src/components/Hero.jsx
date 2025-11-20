@@ -49,12 +49,12 @@ const Hero = () => {
               Zachary Mork
             </h1>
             <h2 className="hero-subtitle">
-              AI & ML Learning Engineer
+              Software Engineer
             </h2>
             <p className="hero-description">
-              AI & ML Learning Engineer and Software Engineering student at UW-Platteville with expertise in computer vision, 
-              robotics, and real-time inference systems. Currently developing cutting-edge AI solutions with &lt;150ms latency 
-              for embedded systems while pursuing my Bachelor's degree with a Cybersecurity minor.
+              Software Engineering student at University of Wisconsin-Platteville with expertise in AI/ML, full-stack development, 
+              and cloud technologies. Currently working as a Research Assistant developing AI-driven robotics features with 
+              real-time inference optimization while pursuing my Bachelor's degree with a Cybersecurity minor.
             </p>
             
             <div className="hero-buttons">
@@ -81,7 +81,7 @@ const Hero = () => {
             </div>
 
             <div className="hero-social">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://github.com/Morkenson" target="_blank" rel="noopener noreferrer" className="social-link">
                 <FaGithub />
               </a>
               <a href="https://www.linkedin.com/in/zachary-mork" target="_blank" rel="noopener noreferrer" className="social-link">
