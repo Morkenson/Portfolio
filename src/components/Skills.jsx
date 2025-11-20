@@ -90,18 +90,18 @@ const Skills = () => {
   return (
     <section id="skills" className="skills section" ref={skillsRef}>
       <div className="container">
-        <h2 className="section-title fade-in">Skills & Technologies</h2>
+        <h2 className="section-title blur-in">Skills & Technologies</h2>
         
-        <div className="skills-intro fade-in">
+        <div className="skills-intro slide-in-right">
           <p>
             I have experience across the full technology stack, from languages and frameworks to 
             AI/ML tools and cloud infrastructure. Here are the technologies I work with.
           </p>
         </div>
 
-        <div className="skills-content">
+        <div className="skills-content stagger-children">
           {skillCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="skill-category fade-in">
+            <div key={categoryIndex} className="skill-category scale-in">
               <h3 className="category-title">{category.title}</h3>
               <div className="skills-grid">
                 {category.skills.map((skill, skillIndex) => (

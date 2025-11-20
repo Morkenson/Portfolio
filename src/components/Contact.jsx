@@ -88,7 +88,7 @@ const Contact = () => {
   return (
     <section id="contact" className="contact section" ref={contactRef}>
       <div className="container">
-        <h2 className="section-title fade-in">Get In Touch</h2>
+        <h2 className="section-title blur-in">Get In Touch</h2>
         
         <div className="contact-intro fade-in">
           <p>

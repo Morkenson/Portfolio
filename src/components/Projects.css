@@ -49,9 +49,9 @@
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-top: 3rem;
-  max-width: 800px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -96,7 +96,7 @@
 
 .project-image {
   position: relative;
-  height: 400px;
+  height: 250px;
   overflow: hidden;
 }
 
@@ -159,21 +159,21 @@
 }
 
 .project-content {
-  padding: 1rem;
+  padding: 0.75rem;
 }
 
 .project-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   color: var(--text-primary);
 }
 
 .project-description {
   color: var(--text-secondary);
-  line-height: 1.5;
-  margin-bottom: 1rem;
-  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
 }
 
 .project-technologies {
