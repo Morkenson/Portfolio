@@ -71,7 +71,7 @@ const Hero = () => {
                 Learn More About Me
               </button>
               <a 
-                href="https://raw.githubusercontent.com/Morkenson/Portfolio/main/Zachary-Mork-Resume.docx" 
+                href="https://raw.githubusercontent.com/Morkenson/Portfolio/main/Zachary-Mork-Software-Engineer-Resume.docx" 
                 download="Zachary_Mork_Resume.docx"
                 className="btn btn-resume"
               >
