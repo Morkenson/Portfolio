@@ -71,12 +71,7 @@ const Contact = () => {
       value: '715-716-0295',
       link: 'tel:+17157160295'
     },
-    {
-      icon: <FaMapMarkerAlt />,
-      title: 'Location',
-      value: 'Minneapolis, MN',
-      link: null
-    }
+    
   ]
 
   const socialLinks = [
@@ -89,14 +84,6 @@ const Contact = () => {
     <section id="contact" className="contact section" ref={contactRef}>
       <div className="container">
         <h2 className="section-title blur-in">Get In Touch</h2>
-        
-        <div className="contact-intro fade-in">
-          <p>
-            I'm always interested in software engineering opportunities, research collaborations, and exciting projects. 
-            Whether you have questions about my work, want to collaborate, or just want to discuss technology, 
-            feel free to reach out! You can also visit my portfolio at <a href="https://zachary-mork-portfolio.dev" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline'}}>zachary-mork-portfolio.dev</a>.
-          </p>
-        </div>
 
         <div className="contact-content">
           <div className="contact-info fade-in">
